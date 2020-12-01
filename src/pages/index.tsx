@@ -3,11 +3,11 @@ import './index.css'
 import { incrementAction, reduceAction } from '../reducers/calculate';
 import { connect } from 'react-redux';
 
-interface Props {
+  interface Props {
     num: number,
-    increment: ()=>any,
-    decrement: ()=>any,
-}
+    increment: () => any,
+    decrement: () => any,
+  }
 
   const mapStateToProps = (state: any) => {
     return {
@@ -23,10 +23,10 @@ interface Props {
   @(connect( mapStateToProps, mapDispatchToProps, ) as any)
   export default class Home extends Component<Props, any> {
     render() {
-        return <div className='container'>
-            <p onClick={this.props.increment}>increment num</p>
-            <p onClick={this.props.decrement}>decrement num</p>
-            <p>{this.props.num}</p>
-        </div>
+      return <div className='container'>
+        <p onClick={this.props.increment}>increment num</p>
+        <p onClick={this.props.decrement}>decrement num</p>
+        <p>{this.props.num}</p>
+      </div>
     }
-}
+  }
