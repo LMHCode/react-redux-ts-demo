@@ -12,33 +12,22 @@ export default class HelloMessage extends React.Component<HelloWorldProps, any> 
   constructor(props: HelloWorldProps){
     super(props);
     this.state = {
-      count: 2,
-      canvas: '',
-      ctx: '',
-      width: '',
-      height: '',
-      particleCount: 100,
-      particles: [],
-      g: 10,
+        count:2
     }
   }
 
   componentDidMount () {
     this.setState({
-      canvas: document.getElementById('canvas')
+      count: 4
+    }, () => {
+      console.log(this.state)
     })
-    console.log(this.state, this.state.canvas)
+    
   }
-
-  init () {
-
-  }
-
 
   render() {
     return <div className='red-color'>
-      {/* <span>Hello {this.props.name}</span> */}
-      <canvas id='canvas'></canvas>
-    </div>;
+      <span>Hello {this.props.name}</span>
+    </div>
   }
 }
