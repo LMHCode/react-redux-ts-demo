@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './index.css'
 import { incrementAction, reduceAction } from '../reducers/calculate';
 import { connect } from 'react-redux';
+import HelloMessage from './HelloMessage'
 
   interface Props {
     num: number,
@@ -27,6 +28,7 @@ import { connect } from 'react-redux';
         <p onClick={this.props.increment}>increment num</p>
         <p onClick={this.props.decrement}>decrement num</p>
         <p>{this.props.num}</p>
+        <HelloMessage name='hello00'></HelloMessage>
       </div>
     }
   }
